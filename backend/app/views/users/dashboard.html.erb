@@ -1,0 +1,9 @@
+<h1>Welcome, <%= current_user.first_name %>!</h1>
+<h2>Your Interviews</h2>
+<ul>
+  <% @interviews.each do |interview| %>
+    <li>
+      <%= link_to interview.title, interview_path(interview) %>
+    </li>
+  <% end %>
+</ul>

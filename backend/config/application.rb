@@ -18,19 +18,19 @@ module Backend
 
     # Configuration for the application, engines, and railties goes here.
     #
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*' # Replace '*' with your frontend URL in production
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    #
+    config.eager_load_paths << Rails.root.join('app/services')
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
 
-  config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins '*' # Replace '*' with your frontend URL in production
-      resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
-    end
-  end
 
 
 
