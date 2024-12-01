@@ -1,6 +1,6 @@
-class OpenAIService
-  require 'openai'
+require 'openai'
 
+class OpenAIService
   def self.generate_questions(job_description)
     client = OpenAI::Client.new(api_key: ENV['OPENAI_API_KEY'])
 
