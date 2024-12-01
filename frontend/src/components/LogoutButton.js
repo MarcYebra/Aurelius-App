@@ -1,21 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from '../api/axios';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from '../api/axios'
+
+export const handleLogout = () => {
+  localStorage.removeItem('token') 
+  delete axios.defaults.headers.common['Authorization'];
+};
 
 const LogoutButton = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    delete axios.defaults.headers.common['Authorization'];
-    navigate('/login');
+  const onLogout = () => {
+    handleLogout() 
+    navigate('/login'); 
   };
 
-  const isLoggedIn = localStorage.getItem('token')
-
-  if (!isLoggedIn) return null
   return (
-    <button onClick={handleLogout} style={{ padding: '10px', margin: '10px' }}>
+    <button onClick={onLogout} style={{ padding: '10px', margin: '10px' }}>
       Logout
     </button>
   );
