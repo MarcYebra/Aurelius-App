@@ -1,7 +1,5 @@
 import React from 'react'
-import ChatBox from './ChatBox'
-
-const Logo = './public/logo.png'
+import JobDescriptionForm from './JobDescriptionForm';
 
 const LandingPage = () => {
   return (
@@ -9,7 +7,7 @@ const LandingPage = () => {
       <div className="landing-page-column">
         <img src="/logo.png" style={{ width: '120px', height: 'auto' }} alt="Logo" />
         <h1>Practice makes perfect</h1>
-        <ChatBox />
+        <JobDescriptionForm />
       </div>
     </div>
   );

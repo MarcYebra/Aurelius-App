@@ -182,37 +182,7 @@ span {
 
 /* Chatbox */
 
-.textbox-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin: 20px 0;
-}
 
-.textbox {
-  width: 80%; 
-  max-width: 45rem; 
-  min-height: 150px; 
-  max-height: fit-content;
-  padding-left: 1.40rem;
-  padding-top: 1rem;
-  font-size: 16px;
-  line-height: 1.5;
-  border-radius: 1.5rem;
-  outline: none;
-  resize: none;
-  overflow: hidden;
-  background-color: rgba(184, 136, 74, 0.726);
-  color: white;
-  border: none;
-}
-
-.textbox::placeholder {
-  color: white;
-  opacity: 0.75;
-  font-size: 18px;
-}
 
 /* Top Bar */
 
@@ -253,7 +223,7 @@ span {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
   border: hsl(0, 0%, 100%);
-
+  
 }
 
 .user-dropdown-item {
@@ -373,4 +343,60 @@ span {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Job Description Form */
+
+.job-description-form-container {
+  width: 40rem;
+}
+
+.job-description-form-textarea {
+  width: 80%;
+  height: 150px;
+  max-height: 300px;
+  resize: vertical;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 1rem;
+  outline: none;
+  background-color: rgba(184, 136, 74, 0.726);
+  color: rgba(255, 255, 255, 0.836);
+  border: none;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent; 
+  resize: none;
+}
+
+.job-description-form-textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.job-description-form-textarea::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 1.5rem; 
+}
+
+.job-description-form-textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 1rem; 
+  border: 2px solid rgba(184, 136, 74, 0.726); 
+}
+
+.job-description-form-textarea::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.job-description-form-container form {
+  text-align: center;
+}
+
+.job-description-form-textarea::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.75;
+  font-size: 18px;
+}
+
+.job-description-form-error {
+  text-align: center;
 }
