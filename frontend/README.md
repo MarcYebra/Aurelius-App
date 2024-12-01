@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Aurelius - Your AI Mock Interview Coach
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aurelius is an AI-powered application designed to help students prepare for job interviews. By engaging in interactive mock interview sessions, users can practice speaking skills, receive real-time feedback, and overcome interview-related anxieties. Whether you're preparing for a technical interview or brushing up on behavioral questions, Aurelius is here to empower you to excel.
 
-## Available Scripts
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **AI Mock Interviews**: Simulate real-life interview scenarios tailored to your career goals and experience level.
+- **Feedback Mechanism**: Get constructive feedback on speaking clarity, tone, and confidence.
+- **Customizable Sessions**: Choose the type of interview (technical, behavioral, or a mix) and the difficulty level.
+- **Question Bank**: Access a vast collection of frequently asked interview questions and unique prompts.
+- **Anxiety Management Tips**: Leverage AI-generated advice to build confidence and reduce stress.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React.js
+- **Backend**: Ruby on Rails
+- **AI**: OpenAI GPT-based language models
+- **Database**: PostgreSQL
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Roadmap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Future features we plan to add include:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Video Feedback**: Analyze body language through video recordings.
+- **Live AI Coaching**: Receive real-time coaching during interviews.
+- **Integration with Job Platforms**: Connect directly with LinkedIn or Indeed for tailored job-specific prep.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the [MIT License](./LICENSE).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
 
-## Learn More
+For questions or suggestions, feel free to contact:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Developer**: Marc Yebra  
+- **Email**: marcyebra4@gmail.com  
+- **GitHub**: [MarcYebra](https://github.com/MarcYebra)
