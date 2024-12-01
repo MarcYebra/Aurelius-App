@@ -1,6 +1,6 @@
-class GoogleSpeechService
-  require 'google/cloud/speech'
+require 'google/cloud/speech'
 
+class GoogleSpeechService
   def self.transcribe(audio_file_path)
     speech = Google::Cloud::Speech.speech
     audio  = { content: File.binread(audio_file_path) }
@@ -10,3 +10,4 @@ class GoogleSpeechService
     response.results.map(&:alternatives).map(&:transcript).join("\n")
   end
 end
+
