@@ -1,38 +1,376 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "arno-pro", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(to bottom, #632d01, #da8618);
   min-height: 100vh;
+  margin: 0;
+  padding: 0; 
+  background-attachment: fixed; 
+}
+
+.landing-page-center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding-top: 5rem;
+  font-size: 25px;
+  letter-spacing: 0.50px;
+}
+
+.landing-page-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px
+}
+
+.chatbox-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px auto;
+  width: 600px;
+}
+
+.chatbox-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
+.text-area {
+  width: 80%; 
+  height: 100px;
+  padding: 10px; 
+  font-size: 16px; 
+  border: none;
+  border-radius: 10px; 
+  background-color: #c79049b7; 
+  color: #ffffff; 
+  box-sizing: border-box; 
+  overflow-y: auto; 
+  resize: none; 
+}
+
+.text-area:focus {
+  outline: none;
+  border: none;
+}
+
+
+.chatbox {
+  width: 600px;
+  max-width: 600px;
+  background-color: #dd961280;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; 
+}
+
+
+.text-area::placeholder {
+  color: #e2e2e2;
+}
+
+.chatbox-messages {
+  flex: 1; 
+  overflow-y: auto; 
+  margin-bottom: 15px;
+}
+
+.GIB {
+  margin-top: 2rem;
+}
+
+
+/* NavBar */
+.navbar {
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo-aurelius {
   color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background: none;
+  padding-left: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-aurelius {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  background: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu {
+  background-color: #382102;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style-type: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #e4a046;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+span {
+  margin-left: 16px;
+}
+
+.nav-menu .sidebar-title {
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Chatbox */
+
+.textbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.textbox {
+  width: 80%; 
+  max-width: 45rem; 
+  min-height: 150px; 
+  max-height: fit-content;
+  padding-left: 1.40rem;
+  padding-top: 1rem;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 1.5rem;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background-color: rgba(184, 136, 74, 0.726);
+  color: white;
+  border: none;
+}
+
+.textbox::placeholder {
+  color: white;
+  opacity: 0.75;
+  font-size: 18px;
+}
+
+/* Top Bar */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between ;
+}
+
+/* User Account Component Styles */
+.user-account-container {
+  margin-right: 1rem;
+  margin-top: 0.73rem;
+}
+
+.user-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eea70dad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  margin-right: 0.73rem;
+  right: 0;
+  color: white;
+  background-color: #382102;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: hsl(0, 0%, 100%);
+
+}
+
+.user-dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.user-dropdown-item:hover {
+  background-color: #e4a046;
+}
+
+/* Generate Interview Button */
+
+.generate-button-container {
+  text-align: center;
+}
+
+.generate-button {
+  padding: 0.75rem 1rem;
+  border-radius: 40px;
+  background-color:#eea70d65 ;
+  border: none;
+  color: white;
+  font-size: 25px;
+}
+
+/* Profile */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.profile-box {
+  background: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  background-color: #965e16f6;
+  border-radius: 1rem;
+}
+
+.profile-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.profile-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Account */
+
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.account-box {
+  background: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  background-color: #965e16f6;
+  border-radius: 1rem;
+}
+
+.account-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.account-box button {
+  color: white;
+  background-color: rgb(150, 35, 35);
+  border-style: none;
+  border-radius: 1rem;
+  padding: 5px 10px;
+}
+
+/* Conversations */
+
+.conversations-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #965e16f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.conversations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.conversation-item {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
