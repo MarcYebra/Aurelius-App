@@ -1,6 +1,11 @@
 class InterviewsController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+    interview = current_user.interviews.find(params[:id])
+    render json: interview, include: :questions_and_answers, status: :ok
+  end
+
   def create 
     #This will fetch the job description from the form
     job_description = param[:job_description]
@@ -15,6 +20,6 @@ class InterviewsController < ApplicationController
       interview.questions_and_answers.create(question: question, sequence: index + 1)
     end
 
-    render json: { interview: interview}
+    render json: { id: interview.id, message: "Interview created successfully"}, status: :created
   end
 end
