@@ -318,8 +318,8 @@ span {
 /* Conversations */
 
 .conversations-container {
-  padding: 20px;
-  max-width: 800px;
+  padding: 50px;
+  max-width: 700px;
   margin: 0 auto;
   background: #965e16f6;
   border-radius: 8px;
@@ -331,7 +331,6 @@ span {
 
 .conversations-list {
   list-style: none;
-  padding: 0;
 }
 
 .conversation-item {

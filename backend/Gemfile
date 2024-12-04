@@ -19,6 +19,7 @@ gem "jbuilder"
 gem 'rack-cors'
 gem 'devise'
 gem 'ruby-openai'
+gem 'faker'
 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
