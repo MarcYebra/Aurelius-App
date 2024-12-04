@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import UserIcon from './components/UserIcon';
 import Settings from './components/Settings';
 import PastConversations from './components/PastConversations';
-import LoginForm from './components/LoginForm';
+
 
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/settings/*" element={<Settings />} />
           <Route path="/conversations" element={<PastConversations />} />
-          <Route path="/users/sign_in" element={<LoginForm />} />
         </Routes>
       </div>
     </Router>

@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user! 
-
-  def dashboard
-    @interviews = current_user.interviews
-  end
+  before_action :authenticate_user!
 
   def show
-    @user = current_user
+    render json: {
+      fullName: "#{current_user.first_name} #{current_user.last_name}",
+      preferredName: current_user.first_name,
+      email: current_user.email
+    }
   end
 
   def edit
@@ -16,10 +16,15 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: "Profile updated successfully."
+      render json: { message: "Profile updated successfully." }, status: :ok
     else
-      render :edit, alert: "Error updating profile."
+      render json: { error: "Error updating profile.", details: @user.errors.full_messages }, status: :unprocessable_entity
     end
+  end
+
+  def dashboard
+    @interviews = current_user.interviews
+    render json: @interviews
   end
 
   private

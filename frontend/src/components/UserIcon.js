@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import LogoutButton, { handleLogout } from "./LogoutButton"
 
 const UserIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +15,7 @@ const UserIcon = () => {
     } else if (option == "My Profile") {
       navigate('/settings/profile')
     } else if (option == 'Logout') {
-      handleLogout()
-      navigate('/users/sign_in')
+      navigate('/')
     }
     setIsOpen(false)
   };

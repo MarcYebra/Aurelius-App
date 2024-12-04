@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from '../api/axios';
 import { useNavigate } from 'react-router-dom';
 
 const JobDescriptionForm = () => {
@@ -9,26 +8,40 @@ const JobDescriptionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await axios.post('/interviews', {
-        job_description: jobDescription,
+      const response = await fetch('/interviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify({
+          job_description: jobDescription,
+        }),
+        credentials: 'include',
       });
 
-      navigate(`/interviews/${response.data.id}`);
+      if (response.ok) {
+        const data = await response.json();
+        navigate(`/interviews/${data.id}`);
+      } else {
+        setError('Error generating interview. Please try again.');
+      }
     } catch (err) {
+      console.error('Error submitting job description:', err);
       setError('Error generating interview. Please try again.');
     }
   };
 
   return (
-    <div className='job-description-form-container' >
+    <div className='job-description-form-container'>
       <form onSubmit={handleSubmit}>
-          <textarea
-            placeholder="Paste the job description here..."
-            value={jobDescription}
-            onChange={(e) => setJobDescription(e.target.value)}
-            className='job-description-form-textarea'
-          />
+        <textarea
+          placeholder="Paste the job description here..."
+          value={jobDescription}
+          onChange={(e) => setJobDescription(e.target.value)}
+          className='job-description-form-textarea'
+        />
         <button type="submit" className='generate-button GIB'>
           Generate Interview
         </button>
